@@ -24,5 +24,9 @@ atc-social/
 └── tests/
 ```
 
+
+## Abhängigkeiten
+- [`A-TownChain-Okosystems/atc-shivacore`](https://github.com/A-TownChain-Okosystems/atc-shivacore)
+
 ## Copyright
 Copyright © Michael Wroblewski / A-TownChain-Okosystems. All Rights Reserved.
