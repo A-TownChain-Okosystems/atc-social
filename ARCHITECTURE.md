@@ -1,50 +1,51 @@
-# Architecture Specification — atc-social
+# ARCHITECTURE.md — atc-social
+> Copyright © Michael Wroblewski / A-TownChain-Okosystems. All Rights Reserved.
 
-## Overview
-`atc-social` is designed as a core module in **L7 — Social** of the A-TownChain architecture.
-
-## Repository Metadata
-- **Repository Name**: `atc-social`
-- **Title**: Social Layer
-- **Layer**: L7 — Social
-- **Sprint**: 3.2
-- **ATC Standard**: ATC-45
-- **Primary Specification**: Social Layer — P2P Chat, Social Feed, Identity, Reputation
-
-## Directory Structure
-
-```text
+## File Tree
+```tree
 atc-social/
+├── package.json               # Node.js dependencies and scripts configuration
+├── tsconfig.json             # TypeScript compiler settings
+├── src/
+│   ├── index.ts              # Entry point for social module
+│   ├── identity/             # Identity management & decentralized identifier handling
+│   ├── reputation/           # On-chain reputation & trust calculation system
+│   ├── messaging/            # Encrypted social messaging protocols
+│   └── social_graph.rs       # High-performance social graph data structures
 ├── chat/
-│   └── chat_system.atc
+│   └── chat_system.atc       # ATCLang smart contract for real-time chat
 ├── feed/
-│   └── social_feed.atc
+│   └── social_feed.atc       # Decentralized social feed contract
 ├── identity/
-│   └── social_identity.atc
-├── reputation/
-│   └── reputation_system.atc
+│   └── social_identity.atc   # Social identity storage contract
 ├── messaging/
-│   └── messaging.atc
+│   └── messaging.atc         # Messaging protocol contract
 ├── moderation/
-│   └── moderation.atc
-├── README.md
-├── ARCHITECTURE.md
-├── COMPONENT_PLAN.md
-├── FILE_REGISTER.md
-├── STATUS.md
-├── ROADMAP.md
-├── CHANGELOG.md
-├── .gitignore
-└── LICENSE
+│   └── moderation.atc        # Content moderation rules contract
+└── reputation/
+    └── reputation_system.atc # Reputation score calculation contract
 ```
 
-## Component Architecture Table
+## Module Descriptions
+- package.json — Package configuration and npm build scripts for TypeScript social module
+- tsconfig.json — TypeScript configuration for compilation targets and module resolution
+- src/index.ts — Main export interface for social layer components
+- src/identity/ — Identity management system for user DIDs and profile verification
+- src/reputation/ — On-chain reputation scoring and decentralized trust calculation
+- src/messaging/ — End-to-end encrypted messaging protocols and channel handlers
+- src/social_graph.rs — Rust module for high-performance social graph and relationship mapping
+- chat/chat_system.atc — ATCLang smart contract for real-time chat interactions
+- feed/social_feed.atc — Decentralized social feed smart contract
+- identity/social_identity.atc — On-chain social identity storage contract
+- messaging/messaging.atc — Core messaging protocol contract
+- moderation/moderation.atc — Decentralized content moderation contract
+- reputation/reputation_system.atc — On-chain reputation registry smart contract
 
-| Directory | File | Module Name | Primary Responsibility |
-| --- | --- | --- | --- |
-| `chat/` | `chat_system.atc` | `chat_system` | P2P Chat — Direct messages, group chat, encrypted channels |
-| `feed/` | `social_feed.atc` | `social_feed` | Social Feed — Posts, likes, comments, follows, curation |
-| `identity/` | `social_identity.atc` | `social_identity` | Social Identity — Profile, avatar, bio, on-chain identity |
-| `reputation/` | `reputation_system.atc` | `reputation_system` | Reputation System — Score, badges, endorsements |
-| `messaging/` | `messaging.atc` | `messaging` | Messaging — Notifications, announcements, DM routing |
-| `moderation/` | `moderation.atc` | `moderation` | Moderation — Content policies, reports, appeals, bans |
+## Build System
+- TypeScript compiler (tsc) / npm build scripts
+
+## Dependencies
+- Node.js, TypeScript, Rust/Cargo (for social_graph.rs)
+
+## Status (Active/Migrated/Legacy)
+Active (TypeScript)
