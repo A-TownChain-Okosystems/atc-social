@@ -1,48 +1,118 @@
-# Component Plan — atc-social
+# 📋 Komponenten-Plan — atc-social
 
-This document details the components, primary data structures, and core functions implemented in `atc-social`.
+> **Erstellt:** 2026-08-08 | **Agent:** Aurora (Base44)
+> **Korrigiert:** Datei-Erweiterungen von .atc → TypeScript (.ts)
 
-## Core Component Specification
+## Übersicht
 
-### 1. P2P Chat (`chat/chat_system.atc`)
-- **Module**: `chat_system`
-- **ATC Standard**: `ATC-45`
-- **Description**: Direct messages, group chat, encrypted channels
-- **Key Data Structure**: `ChatMessage`
-- **Key Function**: `send_message()` — Routes end-to-end encrypted message through P2P network overlay
+**Repo:** atc-social  
+**Name:** ATC Social  
+**Beschreibung:** Social platform on A-TownChain  
+**Sprache:** TypeScript (.ts)  
+**Build-System:** TypeScript (.ts)-Toolchain
 
-### 1. Social Feed (`feed/social_feed.atc`)
-- **Module**: `social_feed`
-- **ATC Standard**: `ATC-45`
-- **Description**: Posts, likes, comments, follows, curation
-- **Key Data Structure**: `FeedPost`
-- **Key Function**: `publish_post()` — Broadcasts social post content hash to network feed index
+---
 
-### 1. Social Identity (`identity/social_identity.atc`)
-- **Module**: `social_identity`
-- **ATC Standard**: `ATC-45`
-- **Description**: Profile, avatar, bio, on-chain identity
-- **Key Data Structure**: `UserProfile`
-- **Key Function**: `update_profile()` — Updates decentralised social profile metadata and handle bindings
+## Komponenten
 
-### 1. Reputation System (`reputation/reputation_system.atc`)
-- **Module**: `reputation_system`
-- **ATC Standard**: `ATC-45`
-- **Description**: Score, badges, endorsements
-- **Key Data Structure**: `ReputationScore`
-- **Key Function**: `calculate_reputation()` — Computes peer-weighted social reputation score
+### 1. `src/index.ts`
 
-### 1. Messaging (`messaging/messaging.atc`)
-- **Module**: `messaging`
-- **ATC Standard**: `ATC-45`
-- **Description**: Notifications, announcements, DM routing
-- **Key Data Structure**: `Notification`
-- **Key Function**: `push_notification()` — Dispatches system or social notification to target account
+**Beschreibung:** Main entry point
 
-### 1. Moderation (`moderation/moderation.atc`)
-- **Module**: `moderation`
-- **ATC Standard**: `ATC-45`
-- **Description**: Content policies, reports, appeals, bans
-- **Key Data Structure**: `ModerationReport`
-- **Key Function**: `review_report()` — Evaluates community content reports and updates moderation status
+**Status:** 📋 GEPLANT
 
+**Schnittstellen:**
+- Eingabe: —
+- Ausgabe: —
+- Abhängigkeiten: ATC Ecosystem
+
+**Akzeptanzkriterien:**
+1. Datei existiert und kompiliert mit TypeScript (.ts)
+2. Alle öffentlichen Funktionen haben Type-Signatures
+3. Modul ist im FILE_REGISTER.md eingetragen
+
+### 2. `src/feed.ts`
+
+**Beschreibung:** Activity feed
+
+**Status:** 📋 GEPLANT
+
+**Schnittstellen:**
+- Eingabe: —
+- Ausgabe: —
+- Abhängigkeiten: ATC Ecosystem
+
+**Akzeptanzkriterien:**
+1. Datei existiert und kompiliert mit TypeScript (.ts)
+2. Alle öffentlichen Funktionen haben Type-Signatures
+3. Modul ist im FILE_REGISTER.md eingetragen
+
+### 3. `src/profile.ts`
+
+**Beschreibung:** User profile management
+
+**Status:** 📋 GEPLANT
+
+**Schnittstellen:**
+- Eingabe: —
+- Ausgabe: —
+- Abhängigkeiten: ATC Ecosystem
+
+**Akzeptanzkriterien:**
+1. Datei existiert und kompiliert mit TypeScript (.ts)
+2. Alle öffentlichen Funktionen haben Type-Signatures
+3. Modul ist im FILE_REGISTER.md eingetragen
+
+### 4. `src/messaging.ts`
+
+**Beschreibung:** Direct messaging
+
+**Status:** 📋 GEPLANT
+
+**Schnittstellen:**
+- Eingabe: —
+- Ausgabe: —
+- Abhängigkeiten: ATC Ecosystem
+
+**Akzeptanzkriterien:**
+1. Datei existiert und kompiliert mit TypeScript (.ts)
+2. Alle öffentlichen Funktionen haben Type-Signatures
+3. Modul ist im FILE_REGISTER.md eingetragen
+
+### 5. `src/groups.ts`
+
+**Beschreibung:** Group management
+
+**Status:** 📋 GEPLANT
+
+**Schnittstellen:**
+- Eingabe: —
+- Ausgabe: —
+- Abhängigkeiten: ATC Ecosystem
+
+**Akzeptanzkriterien:**
+1. Datei existiert und kompiliert mit TypeScript (.ts)
+2. Alle öffentlichen Funktionen haben Type-Signatures
+3. Modul ist im FILE_REGISTER.md eingetragen
+
+### 6. `src/moderation.ts`
+
+**Beschreibung:** Content moderation
+
+**Status:** 📋 GEPLANT
+
+**Schnittstellen:**
+- Eingabe: —
+- Ausgabe: —
+- Abhängigkeiten: ATC Ecosystem
+
+**Akzeptanzkriterien:**
+1. Datei existiert und kompiliert mit TypeScript (.ts)
+2. Alle öffentlichen Funktionen haben Type-Signatures
+3. Modul ist im FILE_REGISTER.md eingetragen
+
+---
+
+## Hinweis
+
+Dieser Komponenten-Plan wurde korrigiert: Die ursprünglichen .atc-Dateinamen wurden durch TypeScript (.ts)-Dateinamen ersetzt, um die tatsächliche Repository-Sprache widerzuspiegeln.
